@@ -4,11 +4,11 @@ A working prototype for archaeological heritage managers: digital twin, material
 
 The visual language is archival — parchment, walnut, brass — not a generic SaaS dashboard.
 
-## Demonstration data
+## Current heritage site
 
-The bundled site **Kourouma Field Compound** is a **labeled teaching reconstruction**. It is **not** a verified record of a named monument. Climate series, terrain, drainage, and forecasts are simulated.
+The active site in this app is the currently loaded public heritage model for the twin viewer. The simulation logic is intentionally labeled as illustrative and is not presented as a verified record of a named monument.
 
-Do not cite this dataset as fact about a real place.
+The app uses transparent metadata, scenario assumptions, and risk labels so that evidence-based observations can replace the current illustrative values later.
 
 Reserved connections (not ingested yet):
 

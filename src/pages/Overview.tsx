@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
-import { SiteScene, TwinToolbar } from '@/components/twin/SiteScene'
+import { TwinToolbar } from '@/components/twin/SiteScene'
+import { HeritageViewer } from '@/components/twin/HeritageViewer'
 import { useSiteBundle } from '@/context/PlatformState'
+import { heritageAsset } from '@/data/heritageAssets'
 import { conditionLabel } from '@/engine/deterioration'
 
 export function OverviewPage() {
@@ -8,14 +10,14 @@ export function OverviewPage() {
 
   return (
     <div>
-      <div className="card hero">
-        <SiteScene />
-        <div className="hero-copy">
-          <span className="badge warn">Demonstration reconstruction</span>
+      <div className="card hero-asset-shell">
+        <div className="hero-copy hero-copy-inline">
+          <span className="badge warn">Illustrative simulation mode</span>
           <span className="script">{site.name}</span>
           <h2>{site.country}</h2>
           <p style={{ margin: 0 }}>{site.historicalContext}</p>
         </div>
+        <HeritageViewer asset={heritageAsset} />
       </div>
       <div style={{ marginTop: '0.7rem' }}>
         <TwinToolbar />

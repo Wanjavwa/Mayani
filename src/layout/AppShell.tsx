@@ -47,7 +47,7 @@ export function AppShell() {
             <select className="site-select" value={siteId} onChange={(e) => setSiteId(e.target.value)}>
               {sites.map((s) => (
                 <option key={s.id} value={s.id}>
-                  {s.name} — {s.isDemonstration ? 'demonstration' : s.country}
+                  {s.name} — {s.country}
                 </option>
               ))}
             </select>

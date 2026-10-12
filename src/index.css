@@ -217,6 +217,20 @@ h3,
   max-width: min(560px, 92%);
 }
 
+.hero-asset-shell {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-copy-inline {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  margin: 1rem 1rem 0;
+  max-width: 620px;
+}
+
 .hero-copy h2 {
   margin: 0.15rem 0 0.35rem;
   font-size: 2.6rem;
@@ -372,6 +386,165 @@ form.stack textarea {
   gap: 0.8rem;
 }
 
+.heritage-viewer {
+  margin-top: 0.8rem;
+  background: rgba(255, 252, 246, 0.6);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.heritage-header-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.heritage-title {
+  margin: 0.2rem 0 0;
+  font-size: 2.2rem;
+}
+
+.heritage-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.heritage-meta-grid div {
+  background: rgba(250, 246, 237, 0.7);
+  border: 1px solid var(--line);
+  padding: 0.7rem 0.75rem;
+}
+
+.heritage-meta-grid p {
+  margin: 0.35rem 0 0;
+  line-height: 1.5;
+}
+
+.heritage-scene {
+  min-height: 500px;
+}
+
+.heritage-embed-frame {
+  min-height: 580px;
+}
+
+.heritage-embed-shell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 580px;
+  overflow: hidden;
+  background: #eadfc2;
+}
+
+.heritage-embed {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 580px;
+  border: 0;
+  background: #eadfc2;
+  transition: filter 200ms ease;
+}
+
+.heritage-scenario-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+}
+
+.heritage-scenario-overlay--current {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.heritage-scenario-overlay--degradation {
+  background: linear-gradient(135deg, rgba(138, 63, 50, 0.22), rgba(181, 106, 60, 0.28));
+}
+
+.heritage-scenario-overlay--intervention {
+  background: linear-gradient(135deg, rgba(93, 123, 79, 0.2), rgba(107, 122, 74, 0.12));
+}
+
+.heritage-scenario-badge {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 2;
+  background: rgba(250, 246, 237, 0.9);
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.7rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mahogany);
+}
+
+.heritage-legend {
+  max-width: 260px;
+}
+
+.feature-chip {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.5rem;
+  margin-top: 0.35rem;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.feature-chip.selected {
+  border-color: var(--brass);
+  background: rgba(167, 134, 77, 0.14);
+}
+
+.viewer-actions {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 2;
+}
+
+.viewer-state {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(241, 233, 219, 0.35);
+  z-index: 3;
+}
+
+.state-panel {
+  background: rgba(250, 246, 237, 0.94);
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.9rem;
+  font-weight: 600;
+}
+
+.heritage-info-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.heritage-card {
+  min-height: 180px;
+}
+
+.feature-name {
+  margin: 0.3rem 0 0.4rem;
+  font-size: 1.5rem;
+}
+
 @media (max-width: 980px) {
   .app-shell {
     grid-template-columns: 1fr;
@@ -392,11 +565,20 @@ form.stack textarea {
   .grid-2,
   .grid-3,
   .grid-4,
-  .compare {
+  .compare,
+  .heritage-meta-grid,
+  .heritage-info-row {
     grid-template-columns: 1fr;
   }
   .page-head {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .heritage-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .heritage-scene {
+    min-height: 420px;
   }
 }
