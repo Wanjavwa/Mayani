@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { PlatformProvider } from '@/context/PlatformState'
 import { AppShell } from '@/layout/AppShell'
 import { OverviewPage } from '@/pages/Overview'
@@ -12,7 +12,7 @@ import { MonitoringPage } from '@/pages/Monitoring'
 export default function App() {
   return (
     <PlatformProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route element={<AppShell />}>
             <Route path="/" element={<OverviewPage />} />
@@ -25,7 +25,7 @@ export default function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </PlatformProvider>
   )
 }
